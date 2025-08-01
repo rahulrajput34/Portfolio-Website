@@ -3,6 +3,7 @@ import Image from "next/image";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
+import SparkleIcon from "@/assets/icons/sparkle.svg";
 
 export const HeroSection = () => {
   return (
@@ -25,6 +26,27 @@ export const HeroSection = () => {
       </HeroOrbit>
       <HeroOrbit size={590} rotation={98}>
         <StarIcon className="text-emerald-300 size-8" />
+      </HeroOrbit>
+      <HeroOrbit size={430} rotation={-14}>
+        <SparkleIcon className="text-emerald-300/20 size-8" />
+      </HeroOrbit>
+      <HeroOrbit size={440} rotation={79}>
+        <SparkleIcon className="text-emerald-300/20 size-5" />
+      </HeroOrbit>
+      <HeroOrbit size={530} rotation={178}>
+        <SparkleIcon className="text-emerald-300/20 size-10" />
+      </HeroOrbit>
+      <HeroOrbit size={710} rotation={144}>
+        <SparkleIcon className="text-emerald-300/20 size-14" />
+      </HeroOrbit>
+      <HeroOrbit size={720} rotation={85}>
+        <div className="size-3 rounded-full bg-emerald-300/20"></div>
+      </HeroOrbit>
+      <HeroOrbit size={520} rotation={-41}>
+        <div className="size-3 rounded-full bg-emerald-300/20"></div>
+      </HeroOrbit>
+      <HeroOrbit size={650} rotation={-5}>
+        <div className="size-3 rounded-full bg-emerald-300/20"></div>
       </HeroOrbit>
       <div className="container">
         <div className="flex flex-col items-center">
