@@ -1,7 +1,8 @@
 import memojiComputer from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
 import grainImage from "@/assets/images/grain.jpg";
-// import { Icon } from "@iconify/react";
+import StarIcon from "@/assets/icons/star.svg";
+import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
   return (
@@ -16,16 +17,15 @@ export const HeroSection = () => {
       <div className="size-[820] hero-ring"></div>
       <div className="size-[1020] hero-ring"></div>
       <div className="size-[1220] hero-ring"></div>
-      {/* <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 border border-red-500 size-[800px] animate-spin [animation-duration:30s]">
-        <div className="border border-red-500 inline-flex animate-spin [animation-duration:5s]">
-        <div className="border border-red-500 inline-flex animate-spin [animation-duration:5s]">
-          <Icon
-            icon="streamline:star-2-remix"
-            className="size-28 text-emerald-300"
-          />
-          </div>
-        </div>
-      </div> */}
+      <HeroOrbit size={800} rotation={-72}>
+        <StarIcon className="text-emerald-300 size-28" />
+      </HeroOrbit>
+      <HeroOrbit size={550} rotation={20}>
+        <StarIcon className="text-emerald-300 size-12" />
+      </HeroOrbit>
+      <HeroOrbit size={590} rotation={98}>
+        <StarIcon className="text-emerald-300 size-8" />
+      </HeroOrbit>
       <div className="container">
         <div className="flex flex-col items-center">
           <Image
