@@ -63,7 +63,10 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project, idx) => (
             <article
               key={project.title}
-              className="group relative rounded-3xl bg-gray-800/95 overflow-hidden"
+              className="sticky group rounded-3xl bg-gray-800/95 overflow-hidden"
+              style={{
+                top: `calc(64px + ${idx * 40}px)`,
+              }}
             >
               <div
                 className="absolute inset-0 -z-10 opacity-10"
