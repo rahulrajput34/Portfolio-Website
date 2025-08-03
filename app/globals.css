@@ -21,3 +21,15 @@
 .animate-tape {
   animation: tape 30s linear infinite;
 }
+
+@keyframes testimonials {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-testimonials {
+  animation: testimonials 60s linear infinite;
+}
