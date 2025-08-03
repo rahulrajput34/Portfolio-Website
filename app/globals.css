@@ -19,7 +19,7 @@
   }
 }
 .animate-tape {
-  animation: tape 30s linear infinite;
+  animation: tape 40s linear infinite;
 }
 
 @keyframes testimonials {
