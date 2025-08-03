@@ -13,16 +13,16 @@ export const HeroOrbit = ({
   size: number;
   rotation: number;
   shouldOrbit?: boolean;
-  orbitDuration?: number;
+  orbitDuration?: string;
   shouldSpin?: boolean;
-  spinDuration?: number;
+  spinDuration?: string;
 }>) => {
   return (
     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
       <div
         className={twMerge(shouldOrbit === true && "animate-spin")}
         style={{
-          animationDuration: `${orbitDuration}s`,
+          animationDuration: orbitDuration,
         }}
       >
         <div
@@ -36,7 +36,7 @@ export const HeroOrbit = ({
           <div
             className={twMerge(shouldSpin === true && "animate-spin")}
             style={{
-              animationDuration: `${spinDuration}s`,
+              animationDuration: spinDuration,
             }}
           >
             <div
