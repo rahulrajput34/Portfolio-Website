@@ -63,7 +63,7 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project, idx) => (
             <article
               key={project.title}
-              className="sticky group rounded-3xl bg-gray-800/95 overflow-hidden"
+              className="sticky group rounded-3xl bg-black overflow-hidden"
               style={{
                 top: `calc(64px + ${idx * 40}px)`,
               }}
