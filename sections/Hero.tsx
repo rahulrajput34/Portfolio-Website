@@ -1,24 +1,24 @@
+"use client";
+
+import Image, { StaticImageData } from "next/image";
 import memojiComputer from "@/assets/images/memoji-computer.png";
-import Image from "next/image";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
-import { HeroOrbit } from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
+import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+    <section className="relative overflow-x-clip py-32 md:py-48 lg:py-60">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
-          style={{
-            backgroundImage: `url(${grainImage.src})`,
-          }}
-        ></div>
-        <div className="size-[620px] hero-ring"></div>
-        <div className="size-[820] hero-ring"></div>
-        <div className="size-[1020] hero-ring"></div>
-        <div className="size-[1220] hero-ring"></div>
+          style={{ backgroundImage: `url(${grainImage.src})` }}
+        />
+        <div className="size-[620px] hero-ring" />
+        <div className="size-[820px] hero-ring" />
+        <div className="size-[1020px] hero-ring" />
+        <div className="size-[1220px] hero-ring" />
         <HeroOrbit
           size={430}
           rotation={-14}
@@ -120,23 +120,24 @@ export const HeroSection = () => {
           <StarIcon className="text-emerald-300 size-28" />
         </HeroOrbit>
       </div>
-      <div className="container">
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-16">
         <div className="flex flex-col items-center">
           <Image
-            src={memojiComputer}
+            src={memojiComputer as StaticImageData}
             alt="Person peeking from behind laptop"
             className="size-[100px]"
           />
-          <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
+          <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg mt-4">
             <div className="bg-green-500 size-2.5 rounded-full relative">
-              <div className="bg-green-500 absolute rounded-full inset-0 animate-ping"></div>
+              <div className="bg-green-500 absolute rounded-full inset-0 animate-ping" />
             </div>
             <div className="text-sm font-medium">
               Available for new projects
             </div>
           </div>
-          <div className="max-w-lg mx-auto">
-            <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
+          <div className="max-w-lg mx-auto mt-8">
+            <h1 className="font-serif text-3xl md:text-5xl text-center tracking-wide">
               Building Exceptional User Experiences
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">
@@ -157,6 +158,6 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
