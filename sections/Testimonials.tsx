@@ -59,7 +59,7 @@ export const TestimonialsSection = () => {
             {sequence.map((t, idx) => (
               <article
                 key={idx}
-                className="relative shrink-0 w-72 sm:w-80 md:w-96 rounded-2xl bg-black overflow-hidden p-6 sm:p-8 flex flex-col whitespace-normal"
+                className="relative shrink-0 w-72 sm:w-80 md:w-96 rounded-2xl bg-black border border-white/25 overflow-hidden p-6 sm:p-8 flex flex-col whitespace-normal"
               >
                 <div
                   className="absolute inset-0 -z-10 opacity-15"
