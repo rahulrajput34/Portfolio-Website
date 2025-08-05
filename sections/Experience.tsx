@@ -65,18 +65,19 @@ const ExperienceSection = () => {
           companies I have worked with:
         </p>
         <div className="mt-12">
-          <VerticalTimeline lineColor="#ffffff33">
+          <VerticalTimeline lineColor="#ffffff1a">
             {experiences.map((exp, index) => (
               <VerticalTimelineElement
                 key={index}
                 contentStyle={{
-                  background: "#100d2d",
-                  color: "#fff",
+                  background: "#000000",
+                  color: "#ffffff1a",
                   borderRadius: "12px",
                   boxShadow: "none",
                   padding: "24px",
+                  border: "1px solid #ffffff1a",
                 }}
-                contentArrowStyle={{ borderRight: "7px solid #100d2d" }}
+                contentArrowStyle={{ borderRight: "7px solid #ffffff1a" }}
                 date={exp.date}
                 dateClassName="text-gray-300 text-sm font-medium"
                 iconStyle={{
