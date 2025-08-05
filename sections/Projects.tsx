@@ -16,7 +16,7 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
+    link: "https://library-management-lilac-zeta.vercel.app",
     image: darkSaasLandingPage,
   },
   {
@@ -28,7 +28,7 @@ const portfolioProjects = [
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "https://ecommerce-frontend-beige-ten.vercel.app",
     image: lightSaasLandingPage,
   },
   {
@@ -40,7 +40,7 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://blog-app-project-eta.vercel.app",
     image: aiStartupLandingPage,
   },
 ];
