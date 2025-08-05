@@ -3,10 +3,17 @@
 import { Icon } from "@iconify/react";
 
 const roles = [
-  { icon: "mdi:web", title: "Web Developer" },
-  { icon: "mdi:cellphone", title: "React Native Developer" },
+  { icon: "mdi:web", title: "Full-Stack Web Developer" },
+  { icon: "simple-icons:nextdotjs", title: "Next.js Developer" },
+  {
+    icon: "simple-icons:laravel",
+    title: "Laravel + Vue.js (Inertia) Developer",
+  },
+  { icon: "logos:mongodb", title: "MERN-Stack Developer" },
+  { icon: "logos:nodejs-icon", title: "Node.js & Express.js Developer" },
+  { icon: "mdi:monitor", title: "Frontend Developer (React & Vue.js)" },
   { icon: "mdi:server", title: "Backend Developer" },
-  { icon: "mdi:video", title: "Content Creator" },
+  { icon: "mdi:cloud-sync", title: "DevOps / Cloud Engineer" },
 ];
 
 export const AboutSection = () => {
@@ -27,24 +34,18 @@ export const AboutSection = () => {
           that solve real-world problems. Let&apos;s work together to bring your
           ideas to life!
         </p>
-        <article className="relative mt-20 lg:mx-auto lg:w-5/6 rounded-2xl bg-black p-12 backdrop-blur">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-16 gap-x-8 place-items-center">
-            {roles.map(({ icon, title }, index) => (
-              <div
-                key={index}
-                className="relative flex flex-col items-center gap-8 group"
-              >
-                <div className="relative">
-                  <div
-                    className="w-24 h-24 md:w-28 md:h-28 bg-gradient-to-r from-emerald-300 to-sky-400 icon-mask"
-                    style={
-                      {
-                        "--mask": `url('https://api.iconify.design/${icon}.svg?inline')`,
-                      } as React.CSSProperties
-                    }
+        <article className="mx-auto mt-16 w-full max-w-6xl rounded-2xl bg-black/70 p-10">
+          <div className="grid grid-cols-1 items-start gap-14 text-center sm:grid-cols-2 lg:grid-cols-4">
+            {roles.map(({ icon, title }, idx) => (
+              <div key={idx} className="flex flex-col items-center gap-6">
+                <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-tr from-emerald-300 to-sky-400">
+                  <Icon
+                    icon={icon}
+                    className="h-10 w-10 text-black/80"
+                    aria-hidden
                   />
                 </div>
-                <h3 className="text-xl md:text-2xl font-extrabold text-white text-center max-w-[12ch]">
+                <h3 className="max-w-[14ch] text-lg font-semibold text-white">
                   {title}
                 </h3>
               </div>
