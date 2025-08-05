@@ -1,17 +1,12 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
-import grainImage from "@/assets/images/grain.jpg";
-import webIcon from "@/assets/role/web.png";
-import mobileIcon from "@/assets/role/mobile.png";
-import backendIcon from "@/assets/role/backend.png";
-import creatorIcon from "@/assets/role/creator.png";
+import { Icon } from "@iconify/react";
 
-const roles: { icon: StaticImageData; title: string }[] = [
-  { icon: webIcon, title: "Web Developer" },
-  { icon: mobileIcon, title: "React Native Developer" },
-  { icon: backendIcon, title: "Backend Developer" },
-  { icon: creatorIcon, title: "Content Creator" },
+const roles = [
+  { icon: "mdi:web", title: "Web Developer" },
+  { icon: "mdi:cellphone", title: "React Native Developer" },
+  { icon: "mdi:server", title: "Backend Developer" },
+  { icon: "mdi:video", title: "Content Creator" },
 ];
 
 export const AboutSection = () => {
@@ -40,11 +35,13 @@ export const AboutSection = () => {
                 className="relative flex flex-col items-center gap-8 group"
               >
                 <div className="relative">
-                  <div className="absolute inset-0 rounded-full bg-black blur-2xl opacity-0 group-hover:opacity-100 transition" />
-                  <Image
-                    src={icon}
-                    alt={title}
-                    className="w-24 h-24 object-contain md:w-28 md:h-28"
+                  <div
+                    className="w-24 h-24 md:w-28 md:h-28 bg-gradient-to-r from-emerald-300 to-sky-400 icon-mask"
+                    style={
+                      {
+                        "--mask": `url('https://api.iconify.design/${icon}.svg?inline')`,
+                      } as React.CSSProperties
+                    }
                   />
                 </div>
                 <h3 className="text-xl md:text-2xl font-extrabold text-white text-center max-w-[12ch]">
