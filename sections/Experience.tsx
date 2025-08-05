@@ -53,64 +53,67 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="relative w-full pb-20">
       <div className="max-w-7xl mx-auto px-6 sm:px-16">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-white font-black text-3xl sm:text-4xl md:text-5xl mb-12 text-center"
-        >
-          Experience
-        </motion.h2>
+        <p className="flex justify-center uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center">
+          Companies I&apos;ve worked with
+        </p>
+        <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
+          Professional Experience
+        </h2>
+        <p className="text-center text-white/60 mt-4 md:text-lg lg:text-xl max-w-md mx-auto">
+          I have worked with a variety of companies, each offering unique
+          challenges and opportunities for growth. Here are some of the
+          companies I have worked with:
+        </p>
+        <div className="mt-12">
+          <VerticalTimeline lineColor="#ffffff33">
+            {experiences.map((exp, index) => (
+              <VerticalTimelineElement
+                key={index}
+                contentStyle={{
+                  background: "#100d2d",
+                  color: "#fff",
+                  borderRadius: "12px",
+                  boxShadow: "none",
+                  padding: "24px",
+                }}
+                contentArrowStyle={{ borderRight: "7px solid #100d2d" }}
+                date={exp.date}
+                dateClassName="text-gray-300 text-sm font-medium"
+                iconStyle={{
+                  background: exp.iconBg,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                icon={
+                  <Image
+                    src={exp.icon}
+                    alt={exp.company}
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
+                }
+              >
+                <h3 className="text-white font-bold text-xl">{exp.title}</h3>
+                <p className="text-violet-200 text-sm font-semibold mb-4">
+                  {exp.company}
+                </p>
 
-        <VerticalTimeline lineColor="#ffffff33">
-          {experiences.map((exp, index) => (
-            <VerticalTimelineElement
-              key={index}
-              contentStyle={{
-                background: "#100d2d",
-                color: "#fff",
-                borderRadius: "12px",
-                boxShadow: "none",
-                padding: "24px",
-              }}
-              contentArrowStyle={{ borderRight: "7px solid #100d2d" }}
-              date={exp.date}
-              dateClassName="text-gray-300 text-sm font-medium"
-              iconStyle={{
-                background: exp.iconBg,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-              icon={
-                <Image
-                  src={exp.icon}
-                  alt={exp.company}
-                  width={40}
-                  height={40}
-                  className="object-contain"
-                />
-              }
-            >
-              <h3 className="text-white font-bold text-xl">{exp.title}</h3>
-              <p className="text-violet-200 text-sm font-semibold mb-4">
-                {exp.company}
-              </p>
-
-              <ul className="list-disc ml-5 space-y-2">
-                {exp.points.map((point, idx) => (
-                  <li
-                    key={idx}
-                    className="text-gray-300 text-sm leading-relaxed"
-                  >
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </VerticalTimelineElement>
-          ))}
-        </VerticalTimeline>
+                <ul className="list-disc ml-5 space-y-2">
+                  {exp.points.map((point, idx) => (
+                    <li
+                      key={idx}
+                      className="text-gray-300 text-sm leading-relaxed"
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+        </div>
       </div>
     </section>
   );
