@@ -33,3 +33,8 @@
 .animate-testimonials {
   animation: testimonials 60s linear infinite;
 }
+
+.icon-mask {
+  -webkit-mask: var(--mask) no-repeat center / contain;
+  mask: var(--mask) no-repeat center / contain;
+}
