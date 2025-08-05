@@ -3,7 +3,7 @@ import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 export const ContactSection = () => (
   <section className="w-full py-12">
     <div className="mx-auto max-w-7xl px-6">
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 rounded-xl bg-black border border-white/10 p-6 md:p-8 shadow-lg w-full">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 rounded-xl bg-black border border-white/25 p-6 md:p-8 shadow-lg w-full">
         <div>
           <h2 className="text-xl sm:text-2xl uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center">
             Let&apos;s Connect and Create Something Amazing!
