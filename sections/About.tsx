@@ -19,7 +19,7 @@ export const AboutSection = () => {
         <h2 className="mt-4 text-center font-serif text-4xl text-[#f1f5f9] md:text-6xl">
           A Glimpse Into My World
         </h2>
-        <p className="mx-auto mt-4 max-w-lg text-center text-[#9eb3c9] md:text-lg">
+        <p className="mx-auto mt-4 max-w-lg text-center text-white/60 md:text-lg">
           I&apos;m a skilled software developer with experience in TypeScript
           and JavaScript, and expertise in frameworks like React, Node.js, and
           Three.js. I&apos;m a quick learner and collaborate closely with
