@@ -5,7 +5,7 @@ export const ContactSection = () => (
     <div className="mx-auto max-w-7xl px-6">
       <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden rounded-2xl border border-white/15 bg-black p-8 shadow-xl backdrop-blur-md">
         <div className="max-w-xl">
-          <h2 className="text-3xl sm:text-4xl font-serif tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-sky-400">
+          <h2 className="text-2xl font-serif tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-sky-400">
             Ready to Build Something Extraordinary?
           </h2>
           <p className="mt-4 text-base sm:text-lg md:text-xl text-white/70">
