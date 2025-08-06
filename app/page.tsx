@@ -11,12 +11,24 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <TestimonialsSection />
-      <ContactSection />
+      <section id="home" className="scroll-mt-32">
+        <HeroSection />
+      </section>
+      <section id="about" className="scroll-mt-32">
+        <AboutSection />
+      </section>
+      <section id="experience" className="scroll-mt-32">
+        <ExperienceSection />
+      </section>
+      <section id="projects" className="scroll-mt-32">
+        <ProjectsSection />
+      </section>
+      <section id="testimonials" className="scroll-mt-32">
+        <TestimonialsSection />
+      </section>
+      <section id="contact" className="scroll-mt-32">
+        <ContactSection />
+      </section>
       <Footer />
     </div>
   );
