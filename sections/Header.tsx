@@ -8,10 +8,8 @@ export const Header = () => {
 
   const links = [
     { id: "home", label: "Home" },
-    { id: "about", label: "About" },
     { id: "experience", label: "Experiences" },
     { id: "projects", label: "Projects" },
-    { id: "testimonials", label: "Testimonials" },
     { id: "contact", label: "Contact" },
   ];
 
