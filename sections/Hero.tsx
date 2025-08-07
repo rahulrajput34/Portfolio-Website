@@ -6,6 +6,7 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
+import ArrowDown from "@/assets/icons/arrow-down.svg";
 
 export const HeroSection = () => {
   return (
@@ -149,9 +150,9 @@ export const HeroSection = () => {
             </p>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-            <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+            <button className=" group inline-flex items-center gap-2 px-6 h-12 rounded-xl border border-white/15 text-white hover:bg-white/10 active:scale-95 transition duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
               <span className="font-semibold">Explore My work</span>
-              <span className="size-4">↓</span>
+              <ArrowDown className="w-5 h-5 transition-transform duration-200 group-hover:-translate-y-1" />
             </button>
             <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
               <span>👋</span>
