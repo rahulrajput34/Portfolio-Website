@@ -52,6 +52,7 @@ const experiences: ExperienceItem[] = [
 const ExperienceSection = () => {
   return (
     <section id="experience" className="relative w-full pb-20">
+      {/* header */}
       <div className="max-w-7xl mx-auto px-6 sm:px-16">
         <p className="flex justify-center uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center">
           Companies I&apos;ve worked with
@@ -64,6 +65,8 @@ const ExperienceSection = () => {
           challenges and opportunities for growth. Here are some of the
           companies I have worked with:
         </p>
+
+        {/* timeline */}
         <div className="mt-12">
           <VerticalTimeline lineColor="#ffffff1a">
             {experiences.map((exp, index) => (
@@ -96,6 +99,7 @@ const ExperienceSection = () => {
                   />
                 }
               >
+                {/* entry */}
                 <h3 className="text-white font-bold text-xl">{exp.title}</h3>
                 <p className="text-violet-200 text-sm font-semibold mb-4">
                   {exp.company}

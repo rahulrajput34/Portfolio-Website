@@ -7,6 +7,7 @@ import grainImage from "@/assets/images/grain.jpg";
 import Image from "next/image";
 
 const testimonials = [
+  /* testimonial data */
   {
     name: "Alex Turner",
     position: "Marketing Manager @ TechStartups",
@@ -40,10 +41,13 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
+  // carousel items
   const sequence = [...testimonials, ...testimonials];
 
   return (
     <section className="py-20 lg:py-28">
+      {/* wrapper */}
+      {/* header */}
       <div className="container mx-auto max-w-screen-xl px-4">
         <p className="uppercase tracking-widest font-semibold text-center bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
           Testimonial of few folks
@@ -54,6 +58,8 @@ export const TestimonialsSection = () => {
         <p className="text-center text-white/60 mt-4 md:text-lg max-w-md mx-auto">
           Few words from people who collaborated with me
         </p>
+
+        {/* slider */}
         <div className="mt-16 w-full overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="inline-flex gap-8 animate-testimonials whitespace-nowrap">
             {sequence.map((t, idx) => (
@@ -61,11 +67,13 @@ export const TestimonialsSection = () => {
                 key={idx}
                 className="relative shrink-0 w-72 sm:w-80 md:w-96 rounded-2xl bg-black border border-white/10 overflow-hidden p-6 sm:p-8 flex flex-col whitespace-normal"
               >
+                {/* card backgrounds */}
                 <div
                   className="absolute inset-0 -z-10 opacity-15"
                   style={{ backgroundImage: `url(${grainImage.src})` }}
                 />
                 <div className="absolute inset-0 -z-10 rounded-2xl border border-white/10" />
+
                 <div className="flex items-center gap-4">
                   <Image
                     src={t.avatar}

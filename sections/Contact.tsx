@@ -5,10 +5,12 @@ import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import ContactModal from "@/components/ContactModal";
 
 export const ContactSection = () => {
+  // modal open state
   const [open, setOpen] = useState(false);
 
   return (
     <section className="w-full py-16">
+      {/* wrapper */}
       <div className="mx-auto max-w-7xl px-6">
         <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden rounded-2xl border border-white/15 bg-black p-8 shadow-xl backdrop-blur-md">
           <div className="max-w-xl">
@@ -32,8 +34,8 @@ export const ContactSection = () => {
           <div className="pointer-events-none absolute -top-10 -left-10 h-40 w-40 rounded-full bg-emerald-400 opacity-10 blur-2xl" />
           <div className="pointer-events-none absolute bottom-0 right-0 h-24 w-24 translate-x-1/4 translate-y-1/4 rounded-full bg-sky-400 opacity-10 blur-xl" />
         </div>
+        <ContactModal open={open} onClose={() => setOpen(false)} />
       </div>
-      <ContactModal open={open} onClose={() => setOpen(false)} />
     </section>
   );
 };

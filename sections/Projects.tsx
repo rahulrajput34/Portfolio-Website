@@ -48,7 +48,9 @@ const portfolioProjects = [
 export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:py-24">
+      {/* wrapper */}
       <div className="container mx-auto max-w-screen-xl px-4">
+        {/* header */}
         <p className="flex justify-center uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center">
           Real-world Results
         </p>
@@ -59,21 +61,24 @@ export const ProjectsSection = () => {
           See how our team has helped companies achieve their goals with our
           latest projects.
         </p>
+
+        {/* projects grid */}
         <div className="mt-12 grid gap-20 md:gap-24">
           {portfolioProjects.map((project, idx) => (
             <article
               key={project.title}
               className="sticky group rounded-3xl bg-black overflow-hidden"
-              style={{
-                top: `calc(64px + ${idx * 40}px)`,
-              }}
+              style={{ top: `calc(64px + ${idx * 40}px)` }}
             >
+              {/* project card backgrounds */}
               <div
                 className="absolute inset-0 -z-10 opacity-10"
                 style={{ backgroundImage: `url(${grainImage.src})` }}
               />
               <div className="absolute inset-0 -z-10 rounded-3xl border border-white/10" />
+
               <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
+                {/* details */}
                 <div className="flex flex-col">
                   <span className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent font-bold uppercase tracking-widest text-sm inline-flex items-center gap-2">
                     <span>{project.company}</span>
@@ -106,6 +111,7 @@ export const ProjectsSection = () => {
                     </button>
                   </a>
                 </div>
+                {/* image */}
                 <div className="relative">
                   <Image
                     src={project.image}

@@ -10,6 +10,7 @@ import { HeroOrbit } from "@/components/HeroOrbit";
 export const HeroSection = () => {
   return (
     <section className="relative overflow-x-clip py-32 md:py-48 lg:py-60">
+      {/* bg rings */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
@@ -121,6 +122,7 @@ export const HeroSection = () => {
         </HeroOrbit>
       </div>
 
+      {/* content */}
       <div className="max-w-7xl mx-auto px-6 sm:px-16">
         <div className="flex flex-col items-center">
           <Image

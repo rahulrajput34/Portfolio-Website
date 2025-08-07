@@ -19,6 +19,7 @@ const roles = [
 export const AboutSection = () => {
   return (
     <section className="py-20 lg:py-28">
+      {/* header */}
       <div className="mx-auto max-w-screen-xl px-4">
         <p className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-center font-semibold uppercase tracking-widest text-transparent">
           About Me
@@ -34,10 +35,13 @@ export const AboutSection = () => {
           that solve real-world problems. Let&apos;s work together to bring your
           ideas to life!
         </p>
+
+        {/* roles grid */}
         <article className="mx-auto mt-16 w-full max-w-6xl rounded-2xl bg-black/70 p-10">
           <div className="grid grid-cols-1 items-start gap-14 text-center sm:grid-cols-2 lg:grid-cols-4">
             {roles.map(({ icon, title }, idx) => (
               <div key={idx} className="flex flex-col items-center gap-6">
+                {/* icon container */}
                 <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-tr from-emerald-300 to-sky-400">
                   <Icon
                     icon={icon}
@@ -45,6 +49,7 @@ export const AboutSection = () => {
                     aria-hidden
                   />
                 </div>
+                {/* role title */}
                 <h3 className="max-w-[14ch] text-lg font-semibold text-white">
                   {title}
                 </h3>

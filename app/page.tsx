@@ -10,6 +10,7 @@ import { TestimonialsSection } from "@/sections/Testimonials";
 export default function Home() {
   return (
     <div>
+      {/* wrapper */}
       <Header />
       <section id="home" className="scroll-mt-32">
         <HeroSection />

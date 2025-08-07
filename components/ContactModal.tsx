@@ -15,6 +15,7 @@ interface Props {
   onClose(): void;
 }
 
+// modal for contact
 export default function ContactModal({ open, onClose }: Props) {
   const [form, setForm] = useState({
     fullName: "",
@@ -25,11 +26,13 @@ export default function ContactModal({ open, onClose }: Props) {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
+  // handle input changes
   const handleChange =
     (field: keyof typeof form) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
       setForm({ ...form, [field]: e.target.value });
 
+  // submit form
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSending(true);
@@ -43,16 +46,17 @@ export default function ContactModal({ open, onClose }: Props) {
     if (res.ok) setForm({ fullName: "", email: "", company: "", message: "" });
   }
 
-  // field classes for input fields
+  // input styles
   const fieldClasses =
     "w-full rounded-lg border border-white/15 bg-black/80 px-5 py-3.5 " +
-    "text-sm text-white placeholder-gray-500 outline-none " +
-    "autofill:bg-black/80 autofill:text-white " +
-    "autofill:border-white/15 " +
+    "text-sm text-white placeholder-gray-500 outline-none autofill:bg-black/80 " +
+    "autofill:text-white autofill:border-white/15 " +
     "autofill:shadow-[inset_0_0_0_1000px_rgba(0,0,0,0.80)]";
 
   return (
     <Transition show={open} as={Fragment}>
+      {/* wrapper */}
+      {/* content */}
       <Dialog
         as="div"
         className="fixed inset-0 z-50 grid place-items-center p-6"
@@ -71,10 +75,7 @@ export default function ContactModal({ open, onClose }: Props) {
           leaveTo="scale-95 opacity-0"
         >
           <div className="relative w-full max-w-3xl overflow-hidden rounded-xl bg-black p-10 md:p-12 shadow-lg">
-            <div className="pointer-events-none absolute -top-10 -left-10 h-40 w-40 rounded-full bg-emerald-400 opacity-10 blur-2xl" />
-            <div className="pointer-events-none absolute bottom-0 right-0 h-24 w-24 translate-x-1/4 translate-y-1/4 rounded-full bg-sky-400 opacity-10 blur-xl" />
-
-            {/* Close icon */}
+            {/* close */}
             <button
               onClick={onClose}
               aria-label="Close"
@@ -83,7 +84,7 @@ export default function ContactModal({ open, onClose }: Props) {
               <Icon icon="mdi:close" className="h-5 w-5" />
             </button>
 
-            {/* Heading */}
+            {/* title */}
             <DialogTitle className="mb-8 text-2xl font-semibold uppercase tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent lg:text-3xl">
               Get in touch
             </DialogTitle>
@@ -135,7 +136,7 @@ export default function ContactModal({ open, onClose }: Props) {
                   className={`${fieldClasses} no-scrollbar`}
                 />
 
-                {/* Action buttons */}
+                {/* buttons */}
                 <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
                   <button
                     type="button"
