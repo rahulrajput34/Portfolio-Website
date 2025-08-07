@@ -142,7 +142,6 @@ export default function ContactModal({ open, onClose }: Props) {
                     onClick={onClose}
                     className="flex w-full items-center justify-center gap-2 rounded-lg border border-white/15 py-3 text-sm font-semibold text-white transition hover:bg-white/10 sm:w-auto sm:px-6"
                   >
-                    <Icon icon="mdi:close" className="h-5 w-5" />
                     Cancel
                   </button>
                   <button
