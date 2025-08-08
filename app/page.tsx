@@ -5,6 +5,7 @@ import { Footer } from "@/sections/Footer";
 import { Header } from "@/sections/Header";
 import { HeroSection } from "@/sections/Hero";
 import { ProjectsSection } from "@/sections/Projects";
+import { SkillsSection } from "@/sections/Skills";
 import { TestimonialsSection } from "@/sections/Testimonials";
 
 export default function Home() {
@@ -23,6 +24,9 @@ export default function Home() {
       </section>
       <section id="projects" className="scroll-mt-32">
         <ProjectsSection />
+      </section>
+      <section id="skills" className="scroll-mt-32">
+        <SkillsSection/>
       </section>
       <section id="testimonials" className="scroll-mt-32">
         <TestimonialsSection />
