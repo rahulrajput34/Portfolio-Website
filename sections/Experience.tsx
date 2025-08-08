@@ -8,6 +8,8 @@ import {
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import "react-vertical-timeline-component/style.min.css";
+
+// TODO: swap these placeholders with your real company logos when you have them.
 import starbucksLogo from "@/assets/company/starbucks.png";
 import teslaLogo from "@/assets/company/tesla.png";
 
@@ -22,29 +24,31 @@ type ExperienceItem = {
 
 const experiences: ExperienceItem[] = [
   {
-    title: "React.js Developer",
-    company: "Starbucks",
-    icon: starbucksLogo,
+    title: "Full-Stack Engineer",
+    company: "BASL Inc.",
+    icon: starbucksLogo, // replace with your BASL logo asset
     iconBg: "#ffffff",
-    date: "March 2020 - April 2021",
+    date: "8 months",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built and shipped a multi-party chat system for agents, vendors, and admins to coordinate marketing activity.",
+      "Designed a multi-role onboarding flow (organization, vendor, customer) with clear validation and auditability.",
+      "Delivered a service marketplace: service ordering, contractor booking, order summaries, and billing/payment workflows.",
+      "Created a vendor analytics dashboard with real-time order stats and YoY sales comparisons using ECharts.",
+      "Implemented email notifications with Blade templates, S3 file uploads, and performance upgrades across the stack.",
+      "Worked with Docker and Git workflows to streamline local dev and deployments.",
     ],
   },
   {
-    title: "React Native Developer",
-    company: "Tesla",
-    icon: teslaLogo,
+    title: "Front-End Developer (Part-Time)",
+    company: "Superior Web Solutions Inc.",
+    icon: teslaLogo, // replace with your SWS logo asset
     iconBg: "#ffffff",
-    date: "Jan 2021 - Feb 2022",
+    date: "5 months (part-time)",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built responsive, accessible UI components with React and TypeScript following team best practices.",
+      "Integrated charts and interactive widgets (e.g., dashboards, calendars) while keeping bundles lean and fast.",
+      "Collaborated with designers and backend engineers to ship features with clean APIs and predictable state.",
+      "Participated in code reviews, improved developer experience, and contributed to documentation.",
     ],
   },
 ];
@@ -55,15 +59,15 @@ const ExperienceSection = () => {
       {/* header */}
       <div className="max-w-7xl mx-auto px-6 sm:px-16">
         <p className="flex justify-center uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center">
-          Companies I&apos;ve worked with
+          Experience
         </p>
         <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
           Professional Experience
         </h2>
         <p className="text-center text-white/60 mt-4 md:text-lg lg:text-xl max-w-md mx-auto">
-          I have worked with a variety of companies, each offering unique
-          challenges and opportunities for growth. Here are some of the
-          companies I have worked with:
+          I’ve contributed across the stack—shipping real-time features,
+          analytics, and secure file pipelines—while collaborating with product
+          and design to deliver reliable, user-focused software.
         </p>
 
         {/* timeline */}
