@@ -85,7 +85,7 @@ export default function ContactModal({ open, onClose }: Props) {
             </button>
 
             {/* title */}
-            <DialogTitle className="mb-8 text-2xl font-semibold uppercase tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent lg:text-3xl">
+            <DialogTitle className="mb-8 text-2xl font-serif uppercase tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent lg:text-3xl">
               Get in touch
             </DialogTitle>
 
