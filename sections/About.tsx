@@ -3,17 +3,14 @@
 import { Icon } from "@iconify/react";
 
 const roles = [
-  { icon: "mdi:web", title: "Full-Stack Web Developer" },
-  { icon: "simple-icons:nextdotjs", title: "Next.js Developer" },
-  {
-    icon: "simple-icons:laravel",
-    title: "Laravel + Vue.js (Inertia) Developer",
-  },
-  { icon: "logos:mongodb", title: "MERN-Stack Developer" },
-  { icon: "logos:nodejs-icon", title: "Node.js & Express.js Developer" },
-  { icon: "mdi:monitor", title: "Frontend Developer (React & Vue.js)" },
-  { icon: "mdi:server", title: "Backend Developer" },
-  { icon: "mdi:cloud-sync", title: "DevOps / Cloud Engineer" },
+  { icon: "mdi:web", title: "Software Engineer (Full-Stack)" },
+  { icon: "simple-icons:nextdotjs", title: "Next.js Engineer" },
+  { icon: "simple-icons:laravel", title: "Laravel + Vue (Inertia)" },
+  { icon: "logos:mongodb", title: "MERN Stack Developer" },
+  { icon: "logos:nodejs-icon", title: "Node.js & Express" },
+  { icon: "mdi:monitor", title: "Frontend Engineer (React & Vue)" },
+  { icon: "mdi:server", title: "Backend Engineer (APIs & DBs)" },
+  { icon: "mdi:cloud-sync", title: "Cloud & DevOps (Azure, Docker)" },
 ];
 
 export const AboutSection = () => {
@@ -25,15 +22,15 @@ export const AboutSection = () => {
           About Me
         </p>
         <h2 className="mt-4 text-center font-serif text-4xl text-[#f1f5f9] md:text-6xl">
-          A Glimpse Into My World
+          Who I Am & What I Do
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-center text-white/60 md:text-lg">
-          I&apos;m a skilled software developer with experience in TypeScript
-          and JavaScript, and expertise in frameworks like React, Node.js, and
-          Three.js. I&apos;m a quick learner and collaborate closely with
-          clients to create efficient, scalable, and user-friendly solutions
-          that solve real-world problems. Let&apos;s work together to bring your
-          ideas to life!
+          I’m a software engineer who ships clean, maintainable products end to
+          end. I’ve built chat systems, multi-role onboarding, marketplaces,
+          analytics dashboards, and secure file pipelines. Recent work includes
+          a library management system, a full-stack e-commerce app, and a
+          Drive-style storage tool. I care about thoughtful UX, solid
+          architecture, and measurable results—on web and cloud.
         </p>
 
         {/* roles grid */}
