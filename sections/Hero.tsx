@@ -128,30 +128,29 @@ export const HeroSection = () => {
         <div className="flex flex-col items-center">
           <Image
             src={memojiComputer as StaticImageData}
-            alt="Person peeking from behind laptop"
+            alt="Developer behind a laptop"
             className="size-[100px]"
           />
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg mt-4">
             <div className="bg-green-500 size-2.5 rounded-full relative">
               <div className="bg-green-500 absolute rounded-full inset-0 animate-ping" />
             </div>
-            <div className="text-sm font-medium">
-              Available for new projects
-            </div>
+            <div className="text-sm font-medium">Open to opportunities</div>
           </div>
           <div className="max-w-lg mx-auto mt-8">
             <h1 className="font-serif text-3xl md:text-5xl text-center tracking-wide">
-              Building Exceptional User Experiences
+              Software Engineer
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">
-              I specialize in transforming designs into functional.
-              High-performing Web applications. Let&apos;s discuss your next
-              project.
+              I design, build, and ship dependable, user-focused applications
+              with real-time features, secure authentication, actionable
+              analytics, and scalable file storage, including cloud deployments
+              on Azure. I take products from concept to production.
             </p>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-            <button className=" group inline-flex items-center gap-2 px-6 h-12 rounded-xl border border-white/15 text-white hover:bg-white/10 active:scale-95 transition duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
-              <span className="font-semibold">Explore My work</span>
+            <button className="group inline-flex items-center gap-2 px-6 h-12 rounded-xl border border-white/15 text-white hover:bg-white/10 active:scale-95 transition duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
+              <span className="font-semibold">Explore my work</span>
               <ArrowDown className="w-5 h-5 transition-transform duration-200 group-hover:-translate-y-1" />
             </button>
             <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
