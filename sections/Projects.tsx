@@ -8,39 +8,68 @@ import Image from "next/image";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Personal Project",
+    year: "2025",
+    title: "Library Management System",
+    stacks: [
+      "Next.js",
+      "TypeScript",
+      "Drizzle ORM",
+      "Neon Postgres",
+      "NextAuth",
+      "Tailwind",
+    ],
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      {
+        title: "Role-based auth (admin, staff, members) with protected routes",
+      },
+      { title: "Borrow/return flows, fines/receipts, and admin dashboards" },
+      { title: "Fast DB access with Drizzle + Neon; clean, typed models" },
     ],
     link: "https://library-management-lilac-zeta.vercel.app",
     image: darkSaasLandingPage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Personal Project",
+    year: "2024",
+    title: "Full-Stack E-commerce Platform",
+    stacks: [
+      "React (Vite)",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Stripe/Razorpay",
+      "Cloudinary",
+    ],
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Complete cart/checkout, orders, and admin product management" },
+      {
+        title: "Secure payments (Stripe/Razorpay) and media CDN via Cloudinary",
+      },
+      { title: "Validation & auth with JWT + Joi; optimized API responses" },
     ],
     link: "https://ecommerce-frontend-beige-ten.vercel.app",
     image: lightSaasLandingPage,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+    company: "Personal Project",
+    year: "2025",
+    title: "Drive-Style Storage App",
+    stacks: [
+      "Next.js",
+      "Appwrite",
+      "React 19",
+      "Upload (dropzone)",
+      "Tailwind",
+      "Zod",
     ],
-    link: "https://blog-app-project-eta.vercel.app",
+    results: [
+      { title: "Folder/file CRUD, sharing, previews, and usage analytics" },
+      { title: "Appwrite auth/storage; optimistic UI for quick interactions" },
+      { title: "Client-side validation with Zod; responsive, accessible UI" },
+    ],
+    // TODO: add your live link when ready
+    link: "",
     image: aiStartupLandingPage,
   },
 ];
@@ -58,8 +87,8 @@ export const ProjectsSection = () => {
           Featured Projects
         </h2>
         <p className="text-center text-white/60 mt-4 md:text-lg lg:text-xl max-w-md mx-auto">
-          See how our team has helped companies achieve their goals with our
-          latest projects.
+          A few recent builds that show my approach to shipping clean, reliable
+          software.
         </p>
 
         {/* projects grid */}
@@ -88,6 +117,21 @@ export const ProjectsSection = () => {
                   <h3 className="font-serif text-2xl md:text-4xl mt-3">
                     {project.title}
                   </h3>
+
+                  {/* tech stack chips */}
+                  {project.stacks && project.stacks.length > 0 && (
+                    <ul className="mt-4 flex flex-wrap gap-2">
+                      {project.stacks.map((s) => (
+                        <li
+                          key={s}
+                          className="rounded-full border border-white/15 px-3 py-1 text-xs text-white/70"
+                        >
+                          {s}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
                   <ul className="flex flex-col gap-4 mt-6">
                     {project.results.map((result) => (
                       <li
@@ -99,18 +143,26 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-8 w-full md:w-auto inline-flex"
-                  >
-                    <button className="inline-flex items-center justify-center gap-2 h-12 w-full md:w-auto px-6 rounded-xl font-semibold bg-white text-gray-950 transition-colors duration-300 hover:bg-gray-100">
-                      <span>Visit Live Site</span>
-                      <ArrowUpRightIcon className="size-5 md:size-6" />
-                    </button>
-                  </a>
+
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-8 w-full md:w-auto inline-flex"
+                    >
+                      <button className="inline-flex items-center justify-center gap-2 h-12 w-full md:w-auto px-6 rounded-xl font-semibold bg-white text-gray-950 transition-colors duration-300 hover:bg-gray-100">
+                        <span>Visit Live Site</span>
+                        <ArrowUpRightIcon className="size-5 md:size-6" />
+                      </button>
+                    </a>
+                  ) : (
+                    <div className="mt-8 text-sm text-white/50">
+                      Live link coming soon.
+                    </div>
+                  )}
                 </div>
+
                 {/* image */}
                 <div className="relative">
                   <Image
