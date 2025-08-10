@@ -12,7 +12,7 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Languages",
     icon: "mdi:code-tags",
-    items: ["TypeScript", "JavaScript", "PHP", "Python", "SQL"],
+    items: ["TypeScript", "JavaScript", "PHP", "Python", "SQL", "Java", "C#"],
   },
   {
     title: "Frontend",
@@ -33,13 +33,15 @@ const skillCategories: SkillCategory[] = [
     title: "Backend & Auth",
     icon: "mdi:server",
     items: [
+      "ASP.NET Core",
+      "Laravel",
       "Node.js",
       "Express.js",
-      "Laravel",
       "Flask",
       "REST APIs",
       "Webhooks",
       "NextAuth",
+      "ASP.NET Identity",
       "JWT",
       "bcrypt",
       "Zod",
@@ -58,6 +60,7 @@ const skillCategories: SkillCategory[] = [
       "MongoDB",
       "Redis (Upstash)",
       "Drizzle ORM",
+      "Entity Framework Core",
       "Laravel Eloquent",
       "SQLAlchemy",
       "Mongoose",
@@ -78,7 +81,6 @@ const skillCategories: SkillCategory[] = [
       "Google Gemini",
       "Vercel AI SDK",
       "Stripe",
-      "Razorpay",
       "Cloudinary",
       "ImageKit",
       "ECharts",
@@ -100,7 +102,7 @@ export const SkillsSection = () => {
           The Stack I Build With
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-white/60 md:text-lg">
-          Practical skills for shipping reliable, user-focused software—from
+          Practical skills for shipping reliable, user-focused software from
           product idea to production deployment.
         </p>
 
