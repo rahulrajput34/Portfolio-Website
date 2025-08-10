@@ -44,17 +44,38 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Backend & APIs",
     icon: "mdi:server",
-    items: ["Node.js", "Express.js", "Laravel", "Flask", "REST APIs", "Webhooks"],
+    items: [
+      "Node.js",
+      "Express.js",
+      "Laravel",
+      "Flask",
+      "REST APIs",
+      "Webhooks",
+    ],
   },
   {
     title: "Auth & Forms",
     icon: "mdi:shield-lock",
-    items: ["NextAuth", "JWT", "bcrypt", "Zod", "Joi", "React Hook Form", "RBAC"],
+    items: [
+      "NextAuth",
+      "JWT",
+      "bcrypt",
+      "Zod",
+      "Joi",
+      "React Hook Form",
+      "RBAC",
+    ],
   },
   {
     title: "Data & ORM",
     icon: "mdi:database",
-    items: ["PostgreSQL (Neon)", "MongoDB", "Drizzle ORM", "Mongoose", "Upstash Redis"],
+    items: [
+      "PostgreSQL (Neon)",
+      "MongoDB",
+      "Drizzle ORM",
+      "Mongoose",
+      "Upstash Redis",
+    ],
   },
   {
     title: "Cloud & DevOps",
@@ -84,7 +105,8 @@ export const SkillsSection = () => {
           The Stack I Build With
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-white/60 md:text-lg">
-          Practical skills for shipping reliable, user-focused software—from product idea to production deployment.
+          Practical skills for shipping reliable, user-focused software—from
+          product idea to production deployment.
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -95,9 +117,15 @@ export const SkillsSection = () => {
             >
               <div className="flex items-center gap-3">
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-emerald-300 to-sky-400">
-                  <Icon icon={cat.icon} className="h-5 w-5 text-black/80" aria-hidden />
+                  <Icon
+                    icon={cat.icon}
+                    className="h-5 w-5 text-black/80"
+                    aria-hidden
+                  />
                 </span>
-                <h3 className="text-lg font-semibold text-white">{cat.title}</h3>
+                <h3 className="text-lg font-semibold text-white">
+                  {cat.title}
+                </h3>
               </div>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {cat.items.map((item) => (
