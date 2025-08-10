@@ -10,18 +10,6 @@ type SkillCategory = {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "AI Tools",
-    icon: "mdi:robot-outline",
-    items: [
-      "OpenAI API (ChatGPT)",
-      "Azure OpenAI",
-      "Anthropic Claude",
-      "Google Gemini",
-      "GitHub Copilot",
-      "Vercel AI SDK",
-    ],
-  },
-  {
     title: "Languages",
     icon: "mdi:code-tags",
     items: ["TypeScript", "JavaScript", "PHP", "Python", "SQL"],
@@ -42,7 +30,7 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Backend & APIs",
+    title: "Backend & Auth",
     icon: "mdi:server",
     items: [
       "Node.js",
@@ -51,12 +39,6 @@ const skillCategories: SkillCategory[] = [
       "Flask",
       "REST APIs",
       "Webhooks",
-    ],
-  },
-  {
-    title: "Auth & Forms",
-    icon: "mdi:shield-lock",
-    items: [
       "NextAuth",
       "JWT",
       "bcrypt",
@@ -70,11 +52,15 @@ const skillCategories: SkillCategory[] = [
     title: "Data & ORM",
     icon: "mdi:database",
     items: [
-      "PostgreSQL (Neon)",
+      "PostgreSQL",
+      "MySQL & MariaDB",
+      "Microsoft SQL Server",
       "MongoDB",
+      "Redis (Upstash)",
       "Drizzle ORM",
+      "Laravel Eloquent",
+      "SQLAlchemy",
       "Mongoose",
-      "Upstash Redis",
     ],
   },
   {
@@ -83,14 +69,23 @@ const skillCategories: SkillCategory[] = [
     items: ["Azure", "AWS S3", "Appwrite", "Docker", "Git", "GitHub", "Vercel"],
   },
   {
-    title: "Payments & Media",
-    icon: "mdi:credit-card-outline",
-    items: ["Stripe", "Razorpay", "Cloudinary", "ImageKit"],
-  },
-  {
-    title: "Analytics & Visualization",
-    icon: "mdi:chart-line",
-    items: ["ECharts", "Recharts", "Chart.js"],
+    title: "AI & Integrations",
+    icon: "mdi:robot-outline",
+    items: [
+      "OpenAI API (ChatGPT)",
+      "Azure OpenAI",
+      "Anthropic Claude",
+      "Google Gemini",
+      "Vercel AI SDK",
+      "Stripe",
+      "Razorpay",
+      "Cloudinary",
+      "ImageKit",
+      "ECharts",
+      "Recharts",
+      "Chart.js",
+      "GitHub Copilot",
+    ],
   },
 ];
 
