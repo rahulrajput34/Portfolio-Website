@@ -1,5 +1,5 @@
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+import lightSaasLandingPage from "@/assets/images/ecommerce.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -16,13 +16,15 @@ const portfolioProjects = [
       "TypeScript",
       "Drizzle ORM",
       "PostgreSQL",
+      "CI/CD (GitHub Actions)",
       "NextAuth.js",
       "bcryptjs",
       "Tailwind CSS",
       "Resend (Email API)",
       "ImageKit (Media CDN)",
-      "Redis (Caching)",
+      "Redis",
       "Background Jobs & Workflows",
+      "Axios",
       "Iconify",
       "Headless UI",
       "pdf-lib",
@@ -42,14 +44,21 @@ const portfolioProjects = [
   {
     company: "Personal Project",
     year: "2024",
-    title: "Full-Stack E-commerce Platform",
+    title: "E-commerce Platform",
     stacks: [
-      "React (Vite)",
+      "React.js",
       "Node.js",
-      "Express",
+      "Express.js",
       "MongoDB",
-      "Stripe/Razorpay",
+      "Stripe",
+      "Axios",
+      "Tailwind CSS",
+      "Stripe",
       "Cloudinary",
+      "joi",
+      "bcrypt",
+      "Toast Notifications",
+      "Redux Toolkit",
     ],
     results: [
       { title: "Complete cart/checkout, orders, and admin product management" },
@@ -78,7 +87,7 @@ const portfolioProjects = [
       { title: "Appwrite auth/storage; optimistic UI for quick interactions" },
       { title: "Client-side validation with Zod; responsive, accessible UI" },
     ],
-    // TODO: add your live link when ready
+    // TODO: add live link when ready
     link: "",
     image: aiStartupLandingPage,
   },
