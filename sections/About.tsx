@@ -31,12 +31,12 @@ export const AboutSection = () => {
           Who I Am & the Roles I Cover
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-center text-white/60 md:text-lg">
-          I build production-grade web apps across React/Next.js, Vue/Laravel
-          (Inertia), and ASP.NET. Recent work: real-time chat and role-based
-          onboarding for a real-estate platform; a vendor marketplace with
-          ECharts dashboards; and S3-backed file and email pipelines. I ship
-          secure auth, predictable APIs, and CI/CD on Azure with SQL and
-          MongoDB.
+          I ship clean, maintainable products end-to-end. I’ve built chat
+          systems, multi-role onboarding, marketplaces, analytics dashboards,
+          and secure file pipelines. Recent work: a library management system, a
+          full-stack e-commerce app, and a Drive-style storage tool. I care
+          about thoughtful UX, solid architecture, and measurable results on web
+          and cloud.
         </p>
 
         {/* roles grid */}
