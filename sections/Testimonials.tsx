@@ -9,19 +9,19 @@ import Image from "next/image";
 const testimonials = [
   /* testimonial data */
   {
-    name: "Alex Turner",
+    name: "Gihan",
     position: "Marketing Manager @ TechStartups",
     text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
     avatar: memojiAvatar1,
   },
   {
-    name: "Olivia Green",
+    name: "Justin",
     position: "Head of Design @ GreenLeaf",
     text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
     avatar: memojiAvatar2,
   },
   {
-    name: "Daniel White",
+    name: "Keit",
     position: "CEO @ InnovateCo",
     text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
     avatar: memojiAvatar3,
