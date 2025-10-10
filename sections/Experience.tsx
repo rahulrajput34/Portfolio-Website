@@ -10,8 +10,8 @@ import Image, { StaticImageData } from "next/image";
 import "react-vertical-timeline-component/style.min.css";
 
 // TODO: swap these placeholders with your real company logos when you have them.
-import starbucksLogo from "@/assets/company/starbucks.png";
-import teslaLogo from "@/assets/company/tesla.png";
+import starbucksLogo from "@/assets/company/basl.png";
+import teslaLogo from "@/assets/company/sws.png";
 
 type ExperienceItem = {
   title: string;
@@ -28,7 +28,7 @@ const experiences: ExperienceItem[] = [
     company: "BASL Inc.",
     icon: starbucksLogo, // replace with your BASL logo asset
     iconBg: "#ffffff",
-    date: "8 months",
+    date: "8 months (Co-op)",
     points: [
       "Built and shipped a multi-party chat system for agents, vendors, and admins to coordinate marketing activity.",
       "Designed a multi-role onboarding flow (organization, vendor, customer) with clear validation and auditability.",
