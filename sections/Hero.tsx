@@ -12,7 +12,7 @@ import { Icon } from "@iconify/react";
 
 export const HeroSection = () => {
   return (
-    <section className="relative overflow-x-clip py-32 md:py-48 lg:py-60">
+    <section className="relative overflow-x-clip py-8 md:py-18 lg:py-28">
       {/* bg rings */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
@@ -130,7 +130,7 @@ export const HeroSection = () => {
         <div className="flex flex-col items-center">
           <Image
             src={memojiComputer as StaticImageData}
-            alt="Developer behind a laptop"
+            alt="Full-stack engineer at a laptop"
             className="size-[100px]"
           />
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg mt-4">
@@ -139,17 +139,21 @@ export const HeroSection = () => {
             </div>
             <div className="text-sm font-medium">Open to opportunities</div>
           </div>
-          <div className="max-w-lg mx-auto mt-8">
-            <h1 className="font-serif text-3xl md:text-5xl text-center tracking-wide">
+          <div className="max-w-lg mx-auto mt-8 text-center">
+            <p className="text-sm font-semibold tracking-widest text-emerald-300/90">
+              Rahul Rajput
+            </p>
+            <h1 className="font-serif text-3xl md:text-5xl text-center tracking-wide mt-2">
               Full-Stack Software Engineer
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">
-              I&apos;m a Full-Stack Software Engineer with 2 years of experience
-              building modern, user-friendly web applications. Skilled in React,
-              Vue, Laravel, and ASP.NET, I work across front-end, back-end, and
-              cloud deployment on Azure.
+              I&apos;m a full-stack engineer with 2 years of experience building
+              dependable, user-friendly web apps. I work across React/Next.js,
+              Vue/Laravel, and ASP.NET, and handle front end, back end, and
+              Azure CI/CD to ship secure, scalable products.
             </p>
           </div>
+
           <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
             {/* Experience */}
             <Link
