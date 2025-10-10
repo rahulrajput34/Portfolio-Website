@@ -139,13 +139,13 @@ export const HeroSection = () => {
           </div>
           <div className="max-w-lg mx-auto mt-8">
             <h1 className="font-serif text-3xl md:text-5xl text-center tracking-wide">
-              Software Engineer
+              Full-Stack Software Engineer
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">
-              I design, build, and ship dependable, user-focused applications
-              with real-time features, secure authentication, actionable
-              analytics, and scalable file storage, including cloud deployments
-              on Azure. I take products from concept to production.
+              I&apos;m a Full-Stack Software Engineer with 2 years of experience
+              building modern, user-friendly web applications. Skilled in React,
+              Vue, Laravel, and ASP.NET, I work across front-end, back-end, and
+              cloud deployment on Azure.
             </p>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
