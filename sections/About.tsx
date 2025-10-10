@@ -3,14 +3,20 @@
 import { Icon } from "@iconify/react";
 
 const roles = [
-  { icon: "mdi:web", title: "Software Engineer (Full-Stack)" },
+  { icon: "mdi:web", title: "Full-Stack Software Engineer" },
+  {
+    icon: "simple-icons:laravel",
+    title: "Laravel & Vue (TypeScript, Inertia, MariaDB)",
+  },
   { icon: "simple-icons:nextdotjs", title: "Next.js Engineer" },
-  { icon: "simple-icons:laravel", title: "Laravel + Vue (Inertia)" },
-  { icon: "logos:mongodb", title: "MERN Stack Developer" },
-  { icon: "logos:nodejs-icon", title: "Node.js & Express" },
-  { icon: "mdi:monitor", title: "Frontend Engineer (React & Vue)" },
-  { icon: "mdi:server", title: "Backend Engineer (APIs & DBs)" },
+  { icon: "simple-icons:dotnet", title: "ASP.NET + React/TypeScript" },
+  {
+    icon: "logos:react",
+    title: "React/TypeScript + Node.js/Express (MongoDB)",
+  },
+  { icon: "mdi:server", title: "Backend Engineer (APIs & Databases)" },
   { icon: "mdi:cloud-sync", title: "Cloud & DevOps (Azure, Docker)" },
+  { icon: "mdi:palette", title: "Full-Stack Designer (UX/UI + Frontend)" },
 ];
 
 export const AboutSection = () => {
@@ -22,15 +28,15 @@ export const AboutSection = () => {
           About Me
         </p>
         <h2 className="mt-4 text-center font-serif text-4xl text-[#f1f5f9] md:text-6xl">
-          Who I Am & What I Do
+          Who I Am & the Roles I Cover
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-center text-white/60 md:text-lg">
-          I’m a software engineer who ships clean, maintainable products end to
-          end. I’ve built chat systems, multi-role onboarding, marketplaces,
-          analytics dashboards, and secure file pipelines. Recent work includes
-          a library management system, a full-stack e-commerce app, and a
-          Drive-style storage tool. I care about thoughtful UX, solid
-          architecture, and measurable results—on web and cloud.
+          I build production-grade web apps across React/Next.js, Vue/Laravel
+          (Inertia), and ASP.NET. Recent work: real-time chat and role-based
+          onboarding for a real-estate platform; a vendor marketplace with
+          ECharts dashboards; and S3-backed file and email pipelines. I ship
+          secure auth, predictable APIs, and CI/CD on Azure with SQL and
+          MongoDB.
         </p>
 
         {/* roles grid */}
