@@ -8,10 +8,9 @@ import {
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import "react-vertical-timeline-component/style.min.css";
-
-// TODO: swap these placeholders with your real company logos when you have them.
 import starbucksLogo from "@/assets/company/basl.png";
 import teslaLogo from "@/assets/company/sws.png";
+import mind from "@/assets/company/mind.png"
 
 type ExperienceItem = {
   title: string;
@@ -26,7 +25,7 @@ const experiences: ExperienceItem[] = [
   {
     title: "Full-Stack Engineer",
     company: "BASL Inc.",
-    icon: starbucksLogo, // replace with your BASL logo asset
+    icon: starbucksLogo, 
     iconBg: "#ffffff",
     date: "8 months (Co-op)",
     points: [
@@ -39,11 +38,11 @@ const experiences: ExperienceItem[] = [
     ],
   },
   {
-    title: "Front-End Developer (Part-Time)",
-    company: "Superior Web Solutions Inc.",
-    icon: teslaLogo, // replace with your SWS logo asset
+    title: "Front-End Developer",
+    company: "Mind Inventory",
+    icon: mind, 
     iconBg: "#ffffff",
-    date: "5 months (part-time)",
+    date: "1 year (Contract)",
     points: [
       "Built responsive, accessible UI components with React and TypeScript following team best practices.",
       "Integrated charts and interactive widgets (e.g., dashboards, calendars) while keeping bundles lean and fast.",
