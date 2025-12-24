@@ -4,28 +4,32 @@ const nextConfig: NextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     contentDispositionType: "inline",
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    contentSecurityPolicy:
+      "default-src 'self'; script-src 'none'; sandbox;",
+
     remotePatterns: [
       {
         protocol: "https",
         hostname: "placehold.co",
-        port: "",
-        pathname: "/**/*.{png,jpg,jpeg,svg}",
+        pathname: "/**",
       },
       {
         protocol: "https",
         hostname: "m.media-amazon.com",
-        port: "",
-        pathname: "/**/*.{png,jpg,jpeg,svg}",
+        pathname: "/**",
       },
     ],
   },
+
   typescript: {
     ignoreBuildErrors: true,
   },
+
   eslint: {
     ignoreDuringBuilds: true,
   },
+
+  // Turbopack config for SVG -> React Component (SVGR)
   turbopack: {
     rules: {
       "*.svg": {
