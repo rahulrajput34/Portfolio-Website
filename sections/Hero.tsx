@@ -147,7 +147,7 @@ export const HeroSection = () => {
               Full-Stack Software Engineer
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">
-              I&apos;m a full-stack engineer with 2 years of experience building
+              I&apos;m a full-stack engineer with almost 2 years of experience building
               dependable, user-friendly web apps. I work across React/Next.js,
               Vue/Laravel, and ASP.NET, and handle front end, back end, and
               Azure CI/CD to ship secure, scalable products.
