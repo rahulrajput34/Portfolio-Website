@@ -4,32 +4,17 @@ const nextConfig: NextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     contentDispositionType: "inline",
-    contentSecurityPolicy:
-      "default-src 'self'; script-src 'none'; sandbox;",
-
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "placehold.co",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "m.media-amazon.com",
-        pathname: "/**",
-      },
+      { protocol: "https", hostname: "placehold.co", pathname: "/**" },
+      { protocol: "https", hostname: "m.media-amazon.com", pathname: "/**" },
     ],
   },
 
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
 
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-
-  // Turbopack config for SVG -> React Component (SVGR)
+  // Turbopack (dev)
   turbopack: {
     rules: {
       "*.svg": {
@@ -50,6 +35,36 @@ const nextConfig: NextConfig = {
         as: "*.js",
       },
     },
+  },
+
+  // Webpack (prod build)
+  webpack(config) {
+    // Exclude SVG from Next's default file loader (otherwise it may still treat it like an asset)
+    const fileLoaderRule = config.module.rules.find((rule: any) =>
+      rule?.test?.test?.(".svg")
+    );
+    if (fileLoaderRule) fileLoaderRule.exclude = /\.svg$/i;
+
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: [
+        {
+          loader: "@svgr/webpack",
+          options: {
+            svgo: true,
+            svgoConfig: {
+              plugins: [
+                { name: "removeDimensions", active: true },
+                { name: "removeViewBox", active: false },
+              ],
+            },
+          },
+        },
+      ],
+    });
+
+    return config;
   },
 };
 
