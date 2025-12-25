@@ -15,19 +15,19 @@ export const ContactSection = () => {
         <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden rounded-2xl border border-white/15 bg-black p-8 shadow-xl backdrop-blur-md">
           <div className="max-w-xl">
             <h2 className="uppercase tracking-widest font-semibold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text lg:text-xl">
-              Ready to Build Something Extraordinary?
+              Let us work together
             </h2>
-            <p className="mt-4 text-base sm:text-lg md:text-xl text-white/70">
-              I&apos;m open to freelance projects, collaborations, and full-time
-              roles. Drop me a line and I&apos;ll respond within&nbsp;24 hours.
+            <p className="mt-4 text-base sm:text-lg md:text-base text-white/70">
+              I am available for freelance work, project based collaboration,
+              and full time roles. Send a message and I will reply within one
+              day.
             </p>
           </div>
-
           <button
             onClick={() => setOpen(true)}
             className="group inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400/40"
           >
-            Get in Touch
+            Contact me
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </button>
 

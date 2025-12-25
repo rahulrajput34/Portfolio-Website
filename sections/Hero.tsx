@@ -143,17 +143,18 @@ export const HeroSection = () => {
             <p className="text-sm font-semibold tracking-widest text-emerald-300/90">
               Rahul Rajput
             </p>
-            <h1 className="font-serif text-3xl md:text-5xl text-center tracking-wide mt-2">
-              Full-Stack Software Engineer
+            <h1 className="font-serif text-4xl md:text-4xl text-center tracking-wide mt-2">
+              Full Stack Developer
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">
-              I&apos;m a full-stack engineer with almost 2 years of experience building
-              dependable, user-friendly web apps. I work across React/Next.js,
-              Vue/Laravel, and ASP.NET, and handle front end, back end, and
-              Azure CI/CD to ship secure, scalable products.
+              I build web applications end to end from clean interfaces to
+              reliable APIs and production deployments. I have nearly two years
+              of experience shipping real features, improving performance, and
+              fixing edge cases. I work with TypeScript, React and Next JS, Vue
+              and Laravel, and ASP NET, and I set up Azure build and release
+              pipelines so updates go out smoothly.
             </p>
           </div>
-
           <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
             {/* Experience */}
             <Link

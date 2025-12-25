@@ -12,7 +12,7 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Languages",
     icon: "mdi:code-tags",
-    items: ["TypeScript", "JavaScript", "PHP", "Python", "SQL", "Java", "C#"],
+    items: ["TypeScript", "JavaScript", "C#", "Java", "PHP", "Python", "SQL"],
   },
   {
     title: "Frontend",
@@ -30,7 +30,7 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Backend & Auth",
+    title: "Backend and Security",
     icon: "mdi:server",
     items: [
       "ASP.NET Core",
@@ -40,25 +40,25 @@ const skillCategories: SkillCategory[] = [
       "Flask",
       "REST APIs",
       "Webhooks",
-      "NextAuth",
-      "ASP.NET Identity",
+      "Authentication",
+      "Authorization",
       "JWT",
-      "bcrypt",
+      "RBAC",
+      "Validation",
       "Zod",
       "Joi",
-      "React Hook Form",
-      "RBAC",
     ],
   },
   {
-    title: "Data & ORM",
+    title: "Databases and ORMs",
     icon: "mdi:database",
     items: [
       "PostgreSQL",
-      "MySQL & MariaDB",
       "Microsoft SQL Server",
+      "MySQL",
+      "MariaDB",
       "MongoDB",
-      "Redis (Upstash)",
+      "Redis",
       "Drizzle ORM",
       "Entity Framework Core",
       "Laravel Eloquent",
@@ -67,25 +67,25 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Cloud & DevOps",
+    title: "Cloud and DevOps",
     icon: "mdi:cloud-sync",
-    items: ["Azure", "AWS S3", "Appwrite", "Docker", "Git", "GitHub", "Vercel"],
+    items: ["Azure", "AWS S3", "Docker", "Git", "GitHub", "Vercel", "Appwrite"],
   },
   {
-    title: "AI & Integrations",
+    title: "Integrations and Tools",
     icon: "mdi:robot-outline",
     items: [
-      "OpenAI API (ChatGPT)",
-      "Azure OpenAI",
-      "Anthropic Claude",
-      "Google Gemini",
-      "Vercel AI SDK",
       "Stripe",
       "Cloudinary",
       "ImageKit",
       "ECharts",
       "Recharts",
       "Chart.js",
+      "OpenAI API",
+      "Azure OpenAI",
+      "Claude",
+      "Gemini",
+      "Vercel AI SDK",
       "GitHub Copilot",
     ],
   },
@@ -96,14 +96,16 @@ export const SkillsSection = () => {
     <section className="py-20 lg:py-28">
       <div className="mx-auto max-w-screen-xl px-4">
         <p className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-center font-semibold uppercase tracking-widest text-transparent">
-          Skills & Tools
+          Skills and Tools
         </p>
-        <h2 className="mt-4 text-center font-serif text-4xl text-[#f1f5f9] md:text-6xl">
-          The Stack I Build With
+
+        <h2 className="mt-4 text-center font-serif text-4xl text-[#f1f5f9] md:text-4xl">
+          What I Use to Build and Ship
         </h2>
+
         <p className="mx-auto mt-4 max-w-2xl text-center text-white/60 md:text-lg">
-          Practical skills for shipping reliable, user-focused software from
-          product idea to production deployment.
+          A practical toolkit for building, testing, and deploying web applications with
+          clean user experiences and reliable back end systems.
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -120,10 +122,10 @@ export const SkillsSection = () => {
                     aria-hidden
                   />
                 </span>
-                <h3 className="text-lg font-semibold text-white">
-                  {cat.title}
-                </h3>
+
+                <h3 className="text-lg font-semibold text-white">{cat.title}</h3>
               </div>
+
               <ul className="mt-4 flex flex-wrap gap-2">
                 {cat.items.map((item) => (
                   <li

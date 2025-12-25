@@ -16,29 +16,29 @@ const portfolioProjects = [
       "TypeScript",
       "Drizzle ORM",
       "PostgreSQL",
-      "CI/CD (GitHub Actions)",
-      "NextAuth.js",
+      "GitHub Actions CI CD",
+      "NextAuth",
       "bcryptjs",
       "Tailwind CSS",
-      "Resend (Email API)",
-      "ImageKit (Media CDN)",
+      "Resend email API",
+      "ImageKit media CDN",
       "Redis",
-      "Background Jobs & Workflows",
+      "Background jobs and workflows",
       "Axios",
       "Iconify",
       "Headless UI",
       "pdf-lib",
-      "Toast Notifications",
       "Day.js",
     ],
     results: [
+      { title: "Built role based access for admin, staff, and members" },
       {
-        title: "Role-based auth (admin, staff, members) with protected routes",
+        title:
+          "Implemented borrowing, returns, fines, receipts, and dashboards",
       },
-      { title: "Borrow/return flows, fines/receipts, and admin dashboards" },
-      { title: "Fast DB access with Drizzle + Neon; clean, typed models" },
+      { title: "Created fast, typed data access with Drizzle and PostgreSQL" },
     ],
-    link: "https://library-management-lilac-zeta.vercel.app",
+    link: "https://library-management-lilac-zeta.vercel.app/",
     image: darkSaasLandingPage,
   },
   {
@@ -46,49 +46,48 @@ const portfolioProjects = [
     year: "2024",
     title: "E-commerce Platform",
     stacks: [
-      "React.js",
+      "React",
       "Node.js",
       "Express.js",
       "MongoDB",
       "Stripe",
+      "Razorpay",
       "Axios",
       "Tailwind CSS",
-      "Stripe",
       "Cloudinary",
-      "joi",
-      "bcrypt",
-      "Toast Notifications",
       "Redux Toolkit",
+      "JWT",
+      "Joi",
+      "bcrypt",
     ],
     results: [
-      { title: "Complete cart/checkout, orders, and admin product management" },
-      {
-        title: "Secure payments (Stripe/Razorpay) and media CDN via Cloudinary",
-      },
-      { title: "Validation & auth with JWT + Joi; optimized API responses" },
+      { title: "Built cart, checkout, orders, and admin product management" },
+      { title: "Integrated payments and added secure authentication flows" },
+      { title: "Improved API validation and error handling for stability" },
     ],
-    link: "https://ecommerce-frontend-beige-ten.vercel.app",
+    link: "https://ecommerce-frontend-beige-ten.vercel.app/",
     image: lightSaasLandingPage,
   },
   {
     company: "Personal Project",
     year: "2025",
-    title: "Drive-Style Storage App",
+    title: "Blog Post App",
     stacks: [
-      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "Redux Toolkit",
+      "React Hook Form",
+      "React Router",
       "Appwrite",
-      "React 19",
-      "Upload (dropzone)",
-      "Tailwind",
-      "Zod",
+      "TinyMCE API",
     ],
     results: [
-      { title: "Folder/file CRUD, sharing, previews, and usage analytics" },
-      { title: "Appwrite auth/storage; optimistic UI for quick interactions" },
-      { title: "Client-side validation with Zod; responsive, accessible UI" },
+      { title: "Built create, edit, and delete flows for blog posts" },
+      { title: "Added rich text editing with TinyMCE for clean publishing" },
+      { title: "Handled authentication and data storage using Appwrite" },
     ],
-    // TODO: add live link when ready
-    link: "",
+    link: "https://blog-app-project-eta.vercel.app/",
     image: aiStartupLandingPage,
   },
 ];
@@ -96,21 +95,19 @@ const portfolioProjects = [
 export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:py-24">
-      {/* wrapper */}
       <div className="container mx-auto max-w-screen-xl px-4">
-        {/* header */}
         <p className="flex justify-center uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center">
-          Real-world Results
-        </p>
-        <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
-          Featured Projects
-        </h2>
-        <p className="text-center text-white/60 mt-4 md:text-lg lg:text-xl max-w-md mx-auto">
-          A few recent builds that show my approach to shipping clean, reliable
-          software.
+          Project highlights
         </p>
 
-        {/* projects grid */}
+        <h2 className="font-serif text-4xl md:text-4xl text-center mt-6">
+          Featured projects
+        </h2>
+
+        <p className="text-center text-white/60 mt-4 md:text-lg lg:text-xl max-w-md mx-auto">
+          A few recent builds that show how I deliver clean, reliable software.
+        </p>
+
         <div className="mt-12 grid gap-20 md:gap-24">
           {portfolioProjects.map((project, idx) => (
             <article
@@ -118,7 +115,6 @@ export const ProjectsSection = () => {
               className="sticky group rounded-3xl bg-black overflow-hidden"
               style={{ top: `calc(64px + ${idx * 40}px)` }}
             >
-              {/* project card backgrounds */}
               <div
                 className="absolute inset-0 -z-10 opacity-10"
                 style={{ backgroundImage: `url(${grainImage.src})` }}
@@ -126,18 +122,17 @@ export const ProjectsSection = () => {
               <div className="absolute inset-0 -z-10 rounded-3xl border border-white/10" />
 
               <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
-                {/* details */}
                 <div className="flex flex-col">
                   <span className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent font-bold uppercase tracking-widest text-sm inline-flex items-center gap-2">
                     <span>{project.company}</span>
-                    <span>&bull;</span>
+                    <span>in</span>
                     <span>{project.year}</span>
                   </span>
+
                   <h3 className="font-serif text-2xl md:text-4xl mt-3">
                     {project.title}
                   </h3>
 
-                  {/* tech stack chips */}
                   {project.stacks && project.stacks.length > 0 && (
                     <ul className="mt-4 flex flex-wrap gap-2">
                       {project.stacks.map((s) => (
@@ -171,7 +166,7 @@ export const ProjectsSection = () => {
                       className="mt-8 w-full md:w-auto inline-flex"
                     >
                       <button className="inline-flex items-center justify-center gap-2 h-12 w-full md:w-auto px-6 rounded-xl font-semibold bg-white text-gray-950 transition-colors duration-300 hover:bg-gray-100">
-                        <span>Visit Live Site</span>
+                        <span>View live site</span>
                         <ArrowUpRightIcon className="size-5 md:size-6" />
                       </button>
                     </a>
@@ -182,7 +177,6 @@ export const ProjectsSection = () => {
                   )}
                 </div>
 
-                {/* image */}
                 <div className="relative">
                   <Image
                     src={project.image}

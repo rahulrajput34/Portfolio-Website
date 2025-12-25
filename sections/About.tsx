@@ -27,7 +27,7 @@ export const AboutSection = () => {
         <p className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-center font-semibold uppercase tracking-widest text-transparent">
           About Me
         </p>
-        <h2 className="mt-4 text-center font-serif text-4xl text-[#f1f5f9] md:text-6xl">
+        <h2 className="mt-4 text-center font-serif text-4xl text-[#f1f5f9] md:text-4xl">
           Who I Am & the Roles I Cover
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-center text-white/60 md:text-lg">

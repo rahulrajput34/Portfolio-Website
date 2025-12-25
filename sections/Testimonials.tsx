@@ -7,59 +7,50 @@ import grainImage from "@/assets/images/grain.jpg";
 import Image from "next/image";
 
 const testimonials = [
-  /* testimonial data */
   {
-    name: "Gihan",
-    position: "Marketing Manager @ TechStartups",
-    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
+    name: "Gihan Fonseka",
+    position: "Product Manager at BASL Inc",
+    text: "Rahul consistently delivered high quality work and kept the project moving with clear communication. He improved key pages, fixed issues quickly, and made sure the final experience matched our goals and standards.",
     avatar: memojiAvatar1,
   },
   {
-    name: "Justin",
-    position: "Head of Design @ GreenLeaf",
-    text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
-    avatar: memojiAvatar2,
+    name: "Justin Borzi",
+    position: "Team Lead at BASL Inc",
+    text: "Rahul is dependable and detail focused. He turned our designs into a clean, responsive interface, handled feedback professionally, and delivered code that was easy to review and maintain.",
+    avatar: memojiAvatar5,
   },
   {
     name: "Keit",
-    position: "CEO @ InnovateCo",
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
+    position: "Web Developer at BASL Inc",
+    text: "Rahul worked smoothly with the team and improved the overall user experience through thoughtful changes. He paid attention to performance, edge cases, and consistent UI behavior across the app.",
     avatar: memojiAvatar3,
   },
   {
-    name: "Emily Carter",
-    position: "Product Manager @ GlobalTech",
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
+    name: "Emily",
+    position: "Project Teammate",
+    text: "Rahul was organized and easy to collaborate with. He broke down tasks clearly, delivered on time, and helped the team ship a polished result by keeping the work practical and well structured.",
     avatar: memojiAvatar4,
-  },
-  {
-    name: "Michael Brown",
-    position: "Director of IT @ MegaCorp",
-    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
-    avatar: memojiAvatar5,
   },
 ];
 
 export const TestimonialsSection = () => {
-  // carousel items
   const sequence = [...testimonials, ...testimonials];
 
   return (
     <section className="py-20 lg:py-28">
-      {/* wrapper */}
-      {/* header */}
       <div className="container mx-auto max-w-screen-xl px-4">
         <p className="uppercase tracking-widest font-semibold text-center bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
-          Testimonial of few folks
-        </p>
-        <h2 className="font-serif text-3xl md:text-5xl text-center mt-4">
-          Word On The Street About Me
-        </h2>
-        <p className="text-center text-white/60 mt-4 md:text-lg max-w-md mx-auto">
-          Few words from people who collaborated with me
+          Testimonials
         </p>
 
-        {/* slider */}
+        <h2 className="font-serif text-4xl md:text-4xl text-center mt-4">
+          What People Say About Working With Me
+        </h2>
+
+        <p className="text-center text-white/60 mt-4 md:text-lg max-w-md mx-auto">
+          Feedback from people I have worked with on real projects
+        </p>
+
         <div className="mt-16 w-full overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="inline-flex gap-8 animate-testimonials whitespace-nowrap">
             {sequence.map((t, idx) => (
@@ -67,7 +58,6 @@ export const TestimonialsSection = () => {
                 key={idx}
                 className="relative shrink-0 w-72 sm:w-80 md:w-96 rounded-2xl bg-black border border-white/10 overflow-hidden p-6 sm:p-8 flex flex-col whitespace-normal"
               >
-                {/* card backgrounds */}
                 <div
                   className="absolute inset-0 -z-10 opacity-15"
                   style={{ backgroundImage: `url(${grainImage.src})` }}
@@ -89,6 +79,7 @@ export const TestimonialsSection = () => {
                     </p>
                   </div>
                 </div>
+
                 <p className="mt-5 text-sm leading-relaxed text-white/70 line-clamp-6">
                   {t.text}
                 </p>

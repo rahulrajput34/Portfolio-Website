@@ -10,7 +10,7 @@ import Image, { StaticImageData } from "next/image";
 import "react-vertical-timeline-component/style.min.css";
 import starbucksLogo from "@/assets/company/basl.png";
 import teslaLogo from "@/assets/company/sws.png";
-import mind from "@/assets/company/mind.png"
+import mind from "@/assets/company/mind.png";
 
 type ExperienceItem = {
   title: string;
@@ -23,31 +23,34 @@ type ExperienceItem = {
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Full-Stack Engineer",
+    title: "Full Stack Developer",
     company: "BASL Inc.",
-    icon: starbucksLogo, 
+    icon: starbucksLogo,
     iconBg: "#ffffff",
-    date: "8 months (Co-op)",
+    date: "8 Months ( Co-op )",
     points: [
-      "Built and shipped a multi-party chat system for agents, vendors, and admins to coordinate marketing activity.",
-      "Designed a multi-role onboarding flow (organization, vendor, customer) with clear validation and auditability.",
-      "Delivered a service marketplace: service ordering, contractor booking, order summaries, and billing/payment workflows.",
-      "Created a vendor analytics dashboard with real-time order stats and YoY sales comparisons using ECharts.",
-      "Implemented email notifications with Blade templates, S3 file uploads, and performance upgrades across the stack.",
-      "Worked with Docker and Git workflows to streamline local dev and deployments.",
+      "Built and scaled full stack features using Vue.js, Laravel, and Inertia as part of a cross functional team",
+      "Delivered a role based chat system for agents, vendors, and admins with activity tracking and moderation",
+      "Co built multi role onboarding for organizations, vendors, and customers with verification and access controls",
+      "Co built a service marketplace with order placement, contractor booking, order summaries, and invoicing with bill payment flows",
+      "Implemented Blade email notifications, secure S3 uploads, background jobs, and performance improvements across the stack",
+      "Built a vendor analytics dashboard with real time order statistics and year over year sales using ECharts",
+      "Shipped consistently using Docker for local development, strong Git workflows, and ongoing system upgrades",
     ],
   },
   {
-    title: "Front-End Developer",
-    company: "Mind Inventory",
-    icon: mind, 
+    title: "React Developer",
+    company: "MindInventory",
+    icon: mind,
     iconBg: "#ffffff",
-    date: "1 year (Contract)",
+    date: "10 Months",
     points: [
-      "Built responsive, accessible UI components with React and TypeScript following team best practices.",
-      "Integrated charts and interactive widgets (e.g., dashboards, calendars) while keeping bundles lean and fast.",
-      "Collaborated with designers and backend engineers to ship features with clean APIs and predictable state.",
-      "Participated in code reviews, improved developer experience, and contributed to documentation.",
+      "Built clean and easy to use user interfaces with React for web features",
+      "Worked closely with designers and backend teammates to connect screens to APIs and ship features",
+      "Handled forms, validation, and error states to keep flows clear and reliable",
+      "Improved responsiveness across devices and checked basic accessibility",
+      "Fixed bugs, refined UI details, and kept pages fast on mobile and desktop",
+      "Collaborated in a remote team, met deadlines, and communicated progress clearly",
     ],
   },
 ];
@@ -60,7 +63,7 @@ const ExperienceSection = () => {
         <p className="flex justify-center uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center">
           Experience
         </p>
-        <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
+        <h2 className="font-serif text-3xl md:text-4xl text-center mt-6">
           Professional Experience
         </h2>
         <p className="text-center text-white/60 mt-4 md:text-lg lg:text-xl max-w-md mx-auto">
